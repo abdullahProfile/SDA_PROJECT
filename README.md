@@ -9,12 +9,14 @@
     <th>Registration number</th>
     <th>Semester</th>
     <th>Section</th>
+    <td>Assigned Functionalities<td>
 </tr>
 <tr>
     <td>Abdullah (Group Leader)</td>
     <td>Sp23-Bse-116</td>
     <td>5</td>
     <td>A</td>
+    <td>Group</td>
     
 </tr>
 <tr>
@@ -22,36 +24,42 @@
     <td>Sp23-Bse-029</td>
     <td>5</td>
     <td>A</td>
+    <td>Project</td>
 </tr>
 <tr>
     <td>Syed Mustafa</td>
     <td>Sp23-Bse-015</td>
     <td>5</td>
     <td>A</td>
+    <td>Student</td>
 </tr>
 <tr>
     <td>Zarak Khan</td>
     <td>Sp23-Bse-031</td>
     <td>5</td>
     <td>A</td>
+    <td>Admin</td>
 </tr>
 <tr>
     <td>Abdul Haseeb</td>
     <td>Sp23-Bse-002</td>
     <td>5</td>
     <td>A</td>
+    <td>Document</td>
 </tr>
 <tr>
     <td>Aizaz Afridi</td>
     <td>Sp23-Bse-003</td>
     <td>5</td>
     <td>A</td>
+    <td>Login</td>
 </tr>
 <tr>
     <td>Ahmed Ayyar Khan</td>
     <td>Sp23-Bse-021</td>
     <td>5</td>
     <td>A</td>
+    <td>Supervisor</td>
 </tr>
 </table>
 
