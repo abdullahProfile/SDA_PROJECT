@@ -9,7 +9,7 @@
     <th>Registration number</th>
     <th>Semester</th>
     <th>Section</th>
-    <td>Assigned Functionalities<td>
+    <th>Assigned Functionalities<th>
 </tr>
 <tr>
     <td>Abdullah (Group Leader)</td>
