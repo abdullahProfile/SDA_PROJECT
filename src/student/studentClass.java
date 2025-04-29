@@ -1,7 +1,12 @@
 package student;
+
 import java.util.ArrayList;
 import java.util.List;
-import Login.LoginSystem;
+// Assuming these are your classes; you need to create or import them properly.
+import project.Project;
+import project.Document;
+import project.Feedback;
+import project.Supervisor;
 
 public class StudentClass {
     private String studentId;
@@ -13,7 +18,7 @@ public class StudentClass {
     private boolean loggedIn;
 
     // Constructor
-    public Student(String studentId, String name, String password) {
+    public StudentClass(String studentId, String name, String password) {
         this.studentId = studentId;
         this.name = name;
         this.password = password;
@@ -44,7 +49,6 @@ public class StudentClass {
             System.out.println("Please login first.");
             return;
         }
-        
         submittedDocuments.add(proposal);
         System.out.println("Proposal submitted successfully!");
     }
@@ -54,7 +58,7 @@ public class StudentClass {
             System.out.println("Please login first.");
             return;
         }
-        
+
         if (submittedDocuments.remove(oldDoc)) {
             submittedDocuments.add(newDoc);
             System.out.println("Document updated successfully!");
@@ -68,7 +72,7 @@ public class StudentClass {
             System.out.println("Please login first.");
             return;
         }
-        
+
         if (assignedProject != null) {
             System.out.println("Assigned Project: " + assignedProject.getTitle());
             System.out.println("Description: " + assignedProject.getDescription());
@@ -84,7 +88,7 @@ public class StudentClass {
             System.out.println("Please login first.");
             return;
         }
-        
+
         if (receivedFeedback.isEmpty()) {
             System.out.println("No feedback available.");
         } else {
@@ -95,6 +99,24 @@ public class StudentClass {
                 System.out.println("Comments: " + feedback.getComments());
                 System.out.println("-------------------");
             }
-            }
-        }
+        }
+    }
+
+    // Optionally you can add setter/getter methods
+    public void assignProject(Project project) {
+        this.assignedProject = project;
+    }
+
+    public void addFeedback(Feedback feedback) {
+        this.receivedFeedback.add(feedback);
+    }
+
+    // Getters
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
