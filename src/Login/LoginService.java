@@ -1,84 +1,48 @@
-// LoginService.java
 package Login;
 
-import student.StudentClass;
-import student.StudentStorage;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class LoginService {
-    private List<StudentClass> studentList;
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
-    public LoginService() {
-        // Load students from file
-        studentList = StudentStorage.loadStudents();
-    }
-
-    public StudentClass handleStudentLogin() {
-        System.out.print("Are you a new student? (yes/no): ");
-        String isNew = scanner.nextLine();
-
-        StudentClass currentStudent = null;
-
-        if (isNew.equalsIgnoreCase("yes")) {
-            currentStudent = registerStudent();
-            if (currentStudent != null) {
-                studentList.add(currentStudent);
-                StudentStorage.saveStudent(currentStudent); // Save to file
-            }
-        } else {
-            currentStudent = loginExistingStudent();
-        }
-
-        return currentStudent;
-    }
-
-    private StudentClass registerStudent() {
-        System.out.print("Enter student ID: ");
-        String id = scanner.nextLine();
-
-        System.out.print("Enter name: ");
-        String name = scanner.nextLine();
+    public User handleRegistration() {
+        System.out.println("\n--- Registration ---");
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
 
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
 
-        StudentClass newStudent = new StudentClass(id, name, password);
-        System.out.println("Registration successful!");
+        System.out.print("Enter role (student/supervisor/committee): ");
+        String role = scanner.nextLine().toLowerCase();
 
-        System.out.print("Please login. Enter your password: ");
-        String enteredPassword = scanner.nextLine();
-
-        if (newStudent.login(enteredPassword)) {
-            return newStudent;
-        } else {
-            System.out.println("Login failed after registration.");
-            return null;
+        String studentId = null;
+        if (role.equals("student")) {
+            System.out.print("Enter student ID: ");
+            studentId = scanner.nextLine();
         }
+
+        User newUser = User.register(username, password, role, studentId);
+        if (newUser != null) {
+            System.out.println("Registration successful! Please login.");
+        }
+        return null; // Return null to force login after registration
     }
 
-    private StudentClass loginExistingStudent() {
-        System.out.print("Enter student ID: ");
-        String id = scanner.nextLine();
+    public User handleExistingUserLogin() {
+        System.out.println("\n--- Login ---");
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
 
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
 
-        for (StudentClass student : studentList) {
-            if (student.getStudentId().equals(id)) {
-                if (student.login(password)) {
-                    return student;
-                } else {
-                    System.out.println("Incorrect password.");
-                    return null;
-                }
-            }
+        User user = User.getUserByUsername(username);
+        if (user != null && user.login(username, password)) {
+            System.out.println("Login successful!");
+            return user;
         }
-
-        System.out.println("Student not found. Please register first.");
+        System.out.println("Login failed!");
         return null;
     }
 }

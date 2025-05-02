@@ -1,62 +1,66 @@
-
-import Login.LoginService;
-import student.StudentClass;
+import Login.*;
 import java.util.Scanner;
-import student.*;
+
 public class Main {
     public static void main(String[] args) {
-        GroupService groupService = new GroupService();
-        groupService.createGroup("G1", new Advisor("Dr. Smith"));
-
-        LoginService loginService = new LoginService();
-        StudentClass currentStudent = loginService.handleStudentLogin();
-
-        if (currentStudent == null) {
-            System.out.println("Exiting due to failed login/registration.");
-            return;
-        }
-
         Scanner scanner = new Scanner(System.in);
+        LoginService loginService = new LoginService();
+        User currentUser = null;
 
-        // Group Joining
-        System.out.print("Do you want to join a group? (yes/no): ");
-        String joinGroup = scanner.nextLine();
+        while (true) {
+            System.out.println("\nWelcome to FYP Management System");
+            System.out.println("1. Register");
+            System.out.println("2. Login");
+            System.out.println("3. Exit");
+            System.out.print("Choose an option: ");
+            
+            String mainChoice = scanner.nextLine();
 
-        if (joinGroup.equalsIgnoreCase("yes")) {
-            System.out.print("Enter group ID to join: ");
-            String groupId = scanner.nextLine();
-
-            boolean groupExists = false;
-            for (Group g : groupService.getGroups()) {
-                if (g.getGroupId().equals(groupId)) {
-                    groupExists = true;
+            switch (mainChoice) {
+                case "1":
+                    currentUser = loginService.handleRegistration();
+                    if (currentUser != null) {
+                        showUserMenu(currentUser, scanner);
+                    }
                     break;
+                case "2":
+                    currentUser = loginService.handleExistingUserLogin();
+                    if (currentUser != null) {
+                        showUserMenu(currentUser, scanner);
+                    }
+                    break;
+                case "3":
+                    System.out.println("Exiting system...");
+                    scanner.close();
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice!");
+            }
+        }
+    }
+
+    private static void showUserMenu(User user, Scanner scanner) {
+        boolean logout = false;
+        
+        while (!logout) {
+            user.showMenu();
+            System.out.print("Enter your choice: ");
+            int choice;
+            
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+                user.handleMenuChoice(choice);
+                
+                // Check logout condition based on user type
+                if ((user instanceof Student && choice == 3) ||
+                    (user instanceof Supervisor && choice == 3) ||
+                    (user instanceof Committee && choice == 3)) {
+                    logout = true;
+                    System.out.println("Logging out...");
                 }
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid number!");
             }
-
-            if (!groupExists) {
-                System.out.println("Group not found. Creating group...");
-                groupService.createGroup(groupId, new Advisor("Dr. Smith"));
-            }
-
-            groupService.addStudentToGroup(groupId, currentStudent);
         }
-
-        // Additional functionality
-        System.out.print("Do you want to submit feedback? (yes/no): ");
-        String feedbackChoice = scanner.nextLine();
-        if (feedbackChoice.equalsIgnoreCase("yes")) {
-            Feedback feedback = new Feedback();
-            feedback.collectFeedback(currentStudent);
-        }
-
-        System.out.print("Do you want to work on your project? (yes/no): ");
-        String projectChoice = scanner.nextLine();
-        if (projectChoice.equalsIgnoreCase("yes")) {
-            Project project = new Project();
-            project.startProject(currentStudent);
-        }
-
-        scanner.close();
     }
 }

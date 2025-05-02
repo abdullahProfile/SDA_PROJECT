@@ -1,12 +1,21 @@
-// Student.java
 package Login;
 
-import java.util.Scanner;
-
 public class Student extends User {
+    private String studentId;
+    private String projectTitle;
 
-    public Student(String username, String password) {
+    public Student(String studentId, String username, String password) {
         super(username, password);
+        this.studentId = studentId;
+    }
+
+    // Getters
+    public String getStudentId() { return studentId; }
+    public String getProjectTitle() { return projectTitle; }
+
+    // Setters
+    public void setProjectTitle(String projectTitle) {
+        this.projectTitle = projectTitle;
     }
 
     @Override
@@ -14,52 +23,30 @@ public class Student extends User {
         return "Student";
     }
 
-    public void viewGroupMembers() {
-        System.out.println("Displaying group members...");
-    }
-
-    public void assignSupervisor() {
-        System.out.println("Assigning a supervisor...");
-    }
-
-    public void startChat() {
-        System.out.println("Starting chat with supervisor...");
-    }
-
-    public void giveFeedback() {
-        System.out.println("Giving feedback...");
-    }
-
     @Override
     public void showMenu() {
         System.out.println("\nStudent Menu:");
-        System.out.println("1. View Group Members");
-        System.out.println("2. Assign Supervisor");
-        System.out.println("3. Start Chat");
-        System.out.println("4. Give Feedback");
-        System.out.println("5. Logout");
+        System.out.println("1. View Profile");
+        System.out.println("2. Set Project Title");
+        System.out.println("3. Logout");
     }
 
     @Override
     public void handleMenuChoice(int choice) {
         switch (choice) {
             case 1:
-                viewGroupMembers();
+                System.out.println("Student ID: " + studentId);
+                System.out.println("Project: " + (projectTitle != null ? projectTitle : "Not set"));
                 break;
             case 2:
-                assignSupervisor();
+                System.out.print("Enter project title: ");
+                // Implementation would need a Scanner
                 break;
             case 3:
-                startChat();
-                break;
-            case 4:
-                giveFeedback();
-                break;
-            case 5:
                 System.out.println("Logging out...");
                 break;
             default:
-                System.out.println("Invalid choice. Please try again.");
+                System.out.println("Invalid choice!");
         }
     }
 }
