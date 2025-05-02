@@ -98,7 +98,7 @@
   <h2>Author</h2>
     <p><strong>Abdullah</strong></p>
     <p>GitHub: <a href="https://github.com/abdullahProfile?tab=repositories" target="_blank">GitHub Account Also Explore my other projects</a></p>
-    <p>Email: <a href="mailto:abdullahdev88@gmail.com</a"></p>
+    <p>Email: <a href="mailto:abdullahdev88@gmail.com</a">abdullahdev88@gmail.com</p>
 
 </div>
 
