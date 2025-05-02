@@ -1,15 +1,21 @@
-// LoginSystem.java
+// LoginService.java
 package Login;
 
 import student.StudentClass;
+import student.StudentStorage;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class LoginService {
-    private List<StudentClass> studentList = new ArrayList<>();
+    private List<StudentClass> studentList;
     private Scanner scanner = new Scanner(System.in);
+
+    public LoginService() {
+        // Load students from file
+        studentList = StudentStorage.loadStudents();
+    }
 
     public StudentClass handleStudentLogin() {
         System.out.print("Are you a new student? (yes/no): ");
@@ -19,7 +25,10 @@ public class LoginService {
 
         if (isNew.equalsIgnoreCase("yes")) {
             currentStudent = registerStudent();
-            if (currentStudent != null) studentList.add(currentStudent);
+            if (currentStudent != null) {
+                studentList.add(currentStudent);
+                StudentStorage.saveStudent(currentStudent); // Save to file
+            }
         } else {
             currentStudent = loginExistingStudent();
         }
