@@ -11,7 +11,7 @@ public class StudentStorage {
     public static void saveStudent(StudentClass student) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
             // Save the student's details, including the password
-            writer.write("Student data: "+student.getStudentId() + "," + student.getName() );
+            writer.write("Student data: " +"Student Id: " +student.getStudentId() + "Student Name: "+ student.getName() );
             writer.newLine(); // Add a new line after each student's data
         } catch (IOException e) {
             System.out.println("Error saving student: " + e.getMessage());

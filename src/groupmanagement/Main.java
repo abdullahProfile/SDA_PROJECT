@@ -1,9 +1,8 @@
 
 import Login.LoginService;
 import student.StudentClass;
-
 import java.util.Scanner;
-
+import student.*;
 public class Main {
     public static void main(String[] args) {
         GroupService groupService = new GroupService();
@@ -19,6 +18,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        // Group Joining
         System.out.print("Do you want to join a group? (yes/no): ");
         String joinGroup = scanner.nextLine();
 
@@ -40,6 +40,21 @@ public class Main {
             }
 
             groupService.addStudentToGroup(groupId, currentStudent);
+        }
+
+        // Additional functionality
+        System.out.print("Do you want to submit feedback? (yes/no): ");
+        String feedbackChoice = scanner.nextLine();
+        if (feedbackChoice.equalsIgnoreCase("yes")) {
+            Feedback feedback = new Feedback();
+            feedback.collectFeedback(currentStudent);
+        }
+
+        System.out.print("Do you want to work on your project? (yes/no): ");
+        String projectChoice = scanner.nextLine();
+        if (projectChoice.equalsIgnoreCase("yes")) {
+            Project project = new Project();
+            project.startProject(currentStudent);
         }
 
         scanner.close();
