@@ -22,6 +22,6 @@ public class Feedback {
         this.message = scanner.nextLine();
         this.givenBy = student.getName();
 
-        System.out.println("Thank you for your feedback, " + givenBy + "!");
+        System.out.println("your feedback matters, " + givenBy + "!");
     }
 }
