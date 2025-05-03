@@ -82,6 +82,21 @@ The need for this system arises from the challenges associated with traditional 
 
  <h4>conclusion</h4>
  <p>the FYP Management System represents a major step forward in managing semester projects within educational institutions. By embracing technology and innovation, this system aims to optimize project processes and deliver better outcomes for all participants involved.</p>
+ <h2>How to Run</h2>
+<ol>
+  <li>User visits the <strong>Group Management System</strong>.</li>
+  <li>Search for the file <code>Main.java</code>.</li>
+  <li>Run the <code>Main.java</code> file.</li>
+  <li>A menu will appear prompting the user to select an option:
+    <ul>
+      <li>Register</li>
+      <li>Login</li>
+      <li>Exit</li>
+    </ul>
+  </li>
+  <li>After selecting an option, choose the appropriate <strong>role</strong> (e.g., student, supervisor, committee).</li>
+</ol>
+
 
  <h2>Video Recording by Abdulah</h2>
  <a href="https://drive.google.com/file/d/1iUFSsRFb9dPSMWILExTV0qo-bqrJ2vzr/view?usp=sharing">Visit </a>
