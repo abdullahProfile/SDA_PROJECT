@@ -179,4 +179,4 @@ The need for this system arises from the challenges associated with traditional 
  <h2>Video Recording by Abdulah</h2>
  <a href="https://drive.google.com/file/d/1iUFSsRFb9dPSMWILExTV0qo-bqrJ2vzr/view?usp=sharing">Visit </a>
  <h2>Video Recording by ZARAK</h2>
- <a href=<a href="https://drive.google.com/file/d/1iUFSsRFb9dPSMWILExTV0qo-bqrJ2vzr/view?usp=sharing">Visit </a>
+ <a href="https://drive.google.com/file/d/1iUFSsRFb9dPSMWILExTV0qo-bqrJ2vzr/view?usp=sharing">Visit</a>
