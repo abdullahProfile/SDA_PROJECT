@@ -1,0 +1,4 @@
+1,asad,rana@123,12,Student,1
+2,asad,asad@123,23,Student,2
+3,ubaid,ubaid@123,34,Student,3
+4,ammad,ammad@98,98,Supervisor

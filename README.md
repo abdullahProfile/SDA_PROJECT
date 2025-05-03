@@ -24,21 +24,21 @@
     <td>Sp23-Bse-029</td>
     <td>5</td>
     <td>A</td>
-    <td>Project</td>
+    <td>Admin.Project</td>
 </tr>
 <tr>
     <td>Syed Mustafa</td>
     <td>Sp23-Bse-015</td>
     <td>5</td>
     <td>A</td>
-    <td>Student</td>
+    <td>Admin.Student</td>
 </tr>
 <tr>
     <td>Zarak Khan</td>
     <td>Sp23-Bse-031</td>
     <td>5</td>
     <td>A</td>
-    <td>Admin</td>
+    <td>Admin.Admin</td>
 </tr>
 <tr>
     <td>Abdul Haseeb</td>
@@ -59,7 +59,7 @@
     <td>Sp23-Bse-021</td>
     <td>5</td>
     <td>A</td>
-    <td>Supervisor</td>
+    <td>Admin.Supervisor</td>
 </tr>
 </table>
 
@@ -86,9 +86,9 @@ The need for this system arises from the challenges associated with traditional 
 
  <h3>Features</h3>
     <ul>
-        <li>Student registration and management.</li>
-        <li>Project proposal submission and approval.</li>
-        <li>Supervisor allocation.</li>
+        <li>Admin.Student registration and management.</li>
+        <li>Admin.Project proposal submission and approval.</li>
+        <li>Admin.Supervisor allocation.</li>
         <li>Group creation and editing.</li>
         <li>Evaluation and marks management.</li>
         <li>Report generation.</li>

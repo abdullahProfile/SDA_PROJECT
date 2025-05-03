@@ -1,6 +1,0 @@
-1234,Abdullah,
-2341,aizaz,
-Student data456,rana ,
-Student data: 123,rana asad
-Student data: salman khan,salman khan
-Student data: Student Id123Student IdAbdullah
