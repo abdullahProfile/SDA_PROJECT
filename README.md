@@ -82,6 +82,76 @@ The need for this system arises from the challenges associated with traditional 
 
  <h4>conclusion</h4>
  <p>the FYP Management System represents a major step forward in managing semester projects within educational institutions. By embracing technology and innovation, this system aims to optimize project processes and deliver better outcomes for all participants involved.</p>
+ <h2>System Overview</h2>
+
+ <h3>Features</h3>
+    <ul>
+        <li>Student registration and management.</li>
+        <li>Project proposal submission and approval.</li>
+        <li>Supervisor allocation.</li>
+        <li>Group creation and editing.</li>
+        <li>Evaluation and marks management.</li>
+        <li>Report generation.</li>
+    </ul>
+
+<h3>User Characteristics</h3>
+    <p>Users include:</p>
+    <ul>
+        <li><strong>Students:</strong> Submitting project proposals and viewing progress.</li>
+        <li><strong>Supervisors:</strong> Allocating groups, monitoring progress, and marking evaluations.</li>
+        <li><strong>Administrators:</strong> Managing users, projects, and generating reports.</li>
+    </ul>
+
+<h3>Constraints</h3>
+    <ul>
+        <li>Compliance with educational policies.</li>
+        <li>Hardware limitations of hosting environments.</li>
+        <li>Ensuring data security and privacy.</li>
+    </ul>
+
+<h3>Assumptions and Dependencies</h3>
+    <ul>
+        <li>Users have access to internet-enabled devices.</li>
+        <li>Adequate hardware and software resources are available for deployment.</li>
+    </ul>
+
+<h2>Specific Requirements</h2>
+
+<h3>Functional Requirements</h3>
+    <ul>
+        <li><strong>Manage Students:</strong>
+            <ul>
+                <li>Add, delete, and update student profiles.</li>
+                <li>Search/filter students by name or ID.</li>
+                <li>Assign students to project groups.</li>
+            </ul>
+        </li>
+        <li><strong>Manage Projects:</strong>
+            <ul>
+                <li>Create, edit, and delete project records.</li>
+                <li>Categorize projects for easy filtering.</li>
+            </ul>
+        </li>
+        <li><strong>Manage Supervisors:</strong>
+            <ul>
+                <li>Add and update supervisor profiles.</li>
+                <li>Assign supervisors to projects.</li>
+            </ul>
+        </li>
+        <li><strong>Evaluation Management:</strong>
+            <ul>
+                <li>Define evaluation criteria.</li>
+                <li>Record and update marks.</li>
+            </ul>
+        </li>
+        <li><strong>Group Management:</strong>
+            <ul>
+                <li>Form, edit, and manage project groups.</li>
+                <li>Ensure unique projects and supervisor assignment for each group.</li>
+            </ul>
+        </li>
+ </ul>
+
  <h2>How to Run</h2>
 <ol>
   <li>User visits the <strong>Group Management System</strong>.</li>
