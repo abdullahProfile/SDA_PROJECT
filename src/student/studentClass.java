@@ -3,14 +3,14 @@ package student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentClass {
+public class studentClass {
     private String studentId;
     private String name;
     private String password;
     private boolean loggedIn;
 
     // Constructor for initializing the student object
-    public StudentClass(String studentId, String name, String password) {
+    public studentClass(String studentId, String name, String password) {
         this.studentId = studentId;
         this.name = name;
         this.password = password;

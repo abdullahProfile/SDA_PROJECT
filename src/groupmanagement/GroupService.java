@@ -1,4 +1,4 @@
-import student.StudentClass;
+import student.studentClass;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class GroupService {
         groups.add(new Group(groupId, advisor));
     }
 
-    public void addStudentToGroup(String groupId, StudentClass student) {
+    public void addStudentToGroup(String groupId, studentClass student) {
         for (Group group : groups) {
             if (group.getGroupId().equals(groupId)) {
                 group.addStudent(student);

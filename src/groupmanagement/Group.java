@@ -1,11 +1,11 @@
-import student.StudentClass;
+import student.studentClass;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
     private String groupId;
     private Advisor advisor;
-    private List<StudentClass> students;
+    private List<studentClass> students;
 
     public Group(String groupId, Advisor advisor) {
         this.groupId = groupId;
@@ -13,7 +13,7 @@ public class Group {
         this.students = new ArrayList<>();
     }
 
-    public void addStudent(StudentClass student) {
+    public void addStudent(studentClass student) {
         students.add(student);
     }
 
@@ -25,7 +25,7 @@ public class Group {
         return advisor;
     }
 
-    public List<StudentClass> getStudents() {
+    public List<studentClass> getStudents() {
         return students;
     }
 }

@@ -15,7 +15,7 @@ public class Feedback {
         this.givenBy = givenBy;
     }
 
-    public void collectFeedback(StudentClass student) {
+    public void collectFeedback(studentClass student) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your feedback message: ");

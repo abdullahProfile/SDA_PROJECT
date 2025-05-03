@@ -15,7 +15,7 @@ public class Project {
         this.description = description;
     }
 
-    public void startProject(StudentClass student) {
+    public void startProject(studentClass student) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter project title: ");
