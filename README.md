@@ -1,6 +1,5 @@
-# SDAProject
 # SDA_PROJECT
-<h1>FYP MANAGMENT SYSTEM </h>
+<h1>FYP MANAGMENT SYSTEM </h1>
 
 <h2> Group Members </h2>
 
