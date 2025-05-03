@@ -82,3 +82,6 @@ The need for this system arises from the challenges associated with traditional 
 
  <h4>conclusion</h4>
  <p>the FYP Management System represents a major step forward in managing semester projects within educational institutions. By embracing technology and innovation, this system aims to optimize project processes and deliver better outcomes for all participants involved.</p>
+
+ <h2>Video Recording by Abdulah</h2>
+ <a href="https://drive.google.com/file/d/1iUFSsRFb9dPSMWILExTV0qo-bqrJ2vzr/view?usp=sharing">Visit </a>
