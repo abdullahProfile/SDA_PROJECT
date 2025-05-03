@@ -97,6 +97,14 @@ The need for this system arises from the challenges associated with traditional 
   <li>After selecting an option, choose the appropriate <strong>role</strong> (e.g., student, supervisor, committee).</li>
 </ol>
 
+<h2>🛠️ Technology Stack</h2>
+<ul>
+  <li><strong>Java</strong> – Core programming language used</li>
+  <li><strong>JDK</strong> – Java Development Kit for compiling and running the code</li>
+  <li><strong>IntelliJ IDEA / Eclipse</strong> – (or your IDE) used for development</li>
+  <li><strong>OOP</strong> – Object-Oriented Programming principles</li>
+  <li><strong>Data Structures</strong> – (e.g., arrays, lists, stacks, queues, etc.)</li>
+</ul>
 
  <h2>Video Recording by Abdulah</h2>
  <a href="https://drive.google.com/file/d/1iUFSsRFb9dPSMWILExTV0qo-bqrJ2vzr/view?usp=sharing">Visit </a>
