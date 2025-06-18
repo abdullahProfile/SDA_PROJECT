@@ -3,3 +3,5 @@
 3,ubaid,ubaid@123,34,Student,3
 4,ammad,ammad@98,98,Supervisor
 5,Mukhtiar Zamin,abcd,345,Supervisor
+6,abdullah,rana12345,123456,Supervisor
+8,mustapa,ranamustaga,645,Student

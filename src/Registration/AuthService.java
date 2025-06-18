@@ -30,16 +30,16 @@ public class AuthService {
             System.out.println("Email already registered.");
             return false;
         }
-
         System.out.print("Enter Password: ");
         String password = scanner.nextLine();
 
         String role = type.equals("S") ? "Student" : "Supervisor";
 
         User newUser;
-
+        if (type.equals("S")){
             newUser = new Student(userId, name, email, password, role);
-            if (type.equals("P")) {
+        }
+        else if(type.equals("P")) {
             newUser = new Supervisor(userId, name, email, password, role, new ArrayList<>());
         } else {
             System.out.println("Invalid type.");
@@ -54,20 +54,21 @@ public class AuthService {
 
     public User login(Scanner scanner) {
         System.out.print("Enter Email: ");
-        String email = scanner.nextLine();
+        String email = scanner.nextLine().trim();
 
         System.out.print("Enter Password: ");
-        String password = scanner.nextLine();
+        String password = scanner.nextLine().trim();
 
-        User user = userDatabase.get(email);
-        if (user != null && user.getPassword().equals(password)) {
-            System.out.println("Login successful. Welcome, " + user.getName());
-            return user;
-        } else {
-            System.out.println("Invalid credentials.");
-            return null;
+        for (User u : userDatabase.values()) {
+            if (u.getEmail().equals(email) && u.getPassword().equals(password)) {
+                System.out.println("Login successful. Welcome, " + u.getName());
+                return u;
+            }
         }
+        System.out.println("Invalid credentials.");
+        return null;
     }
+
 
 
     private void afterLogin(Scanner scanner, User user) {

@@ -17,7 +17,7 @@ public class Main {
                 User loggedInUser = auth.login(scanner);
                 if (loggedInUser != null) {
                     String role = loggedInUser.getRole();
-                    proceedAfterLogin(scanner, role);  // or pass the whole user if needed
+                    proceedAfterLogin(scanner, role);
                 } else {
                     System.out.println("Invalid login. Please try again.");
                 }
